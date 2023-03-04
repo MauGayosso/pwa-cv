@@ -1,5 +1,11 @@
 const CACHE_NAME = `dev-cv-v1`;
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/pwa-cv/scrips/sw.js");
+}
+self.addEventListener("activate", event => {
+    console.log("WORKER: activate event in progress.");
+});
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
