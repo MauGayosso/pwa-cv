@@ -11,11 +11,7 @@ self.addEventListener('install', event => {
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
     cache.addAll([
-        "/pwa-cv/docs/",
-        "/pwa-cv/images/",
-        "/pwa-cv/index.html",
-        "/pwa-cv/scripts/",
-        "/pwa-cv/manifest.json"
+ "/pwa-cv/",
     ]);
   })());
 });
