@@ -54,7 +54,7 @@
                   </ul>
                 </nav>
               </div>
-              <div class="d-print-none"><a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/docs/Mauricio_GuerreroGayosso_CV.pdf" data-aos="fade-right" data-aos-delay="700" download="/docs/Mauricio_GuerreroGayosso_CV.pdf">Descargar CV</a><a class="btn btn-info btn-lg shadow-sm mt-1" href="#contact" data-aos="fade-left" data-aos-delay="700">Contactame</a></div>
+              <div class="d-print-none"><a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="/pwa-cv/docs/Mauricio_GuerreroGayosso_CV.pdf" data-aos="fade-right" data-aos-delay="700" download="/pwa-cv/docs/Mauricio_GuerreroGayosso_CV.pdf">Descargar CV</a><a class="btn btn-info btn-lg shadow-sm mt-1" href="#contact" data-aos="fade-left" data-aos-delay="700">Contactame</a></div>
             </div>
           </div>
         </div>
@@ -302,5 +302,10 @@
     <script src="scripts/mdb.min.js?ver=1.2.1"></script>
     <script src="scripts/aos.js?ver=1.2.1"></script>
     <script src="scripts/main.js?ver=1.2.1"></script>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/pwa-cv/scripts/sw.js', { scope: 'https://maugayosso.github.io/pwa-cv/' });
+      }
+      </script>
   </body>
 </html>
