@@ -1,7 +1,7 @@
 const CACHE_NAME = `dev-cv-v1`;
 
 if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/pwa-cv/scrips/sw.js");
+    navigator.serviceWorker.register("/pwa-cv/scripts/sw.js");
 }
 self.addEventListener("activate", event => {
     console.log("WORKER: activate event in progress.");
