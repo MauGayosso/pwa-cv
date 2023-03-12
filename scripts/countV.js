@@ -1,7 +1,7 @@
 let visitors = 0;
 
-if (localStorage.getItem('visitors')) {
-    visitors = parseInt(localStorage.getItem('visitors'));
+if (sessionStorage.getItem('visitors')) {
+    visitors = parseInt(sessionStorage.getItem('visitors'));
   } else {
     visitors = 0;
   }
