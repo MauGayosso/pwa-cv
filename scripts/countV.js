@@ -1,9 +1,17 @@
 let visitors = 0;
 const currentHour = new Date()
 
-localStorage.setItem('currentHour', currentHour);
+const year = currentDate.getFullYear();
+const month = currentDate.getMonth() + 1;
+const day = currentDate.getDate();
+const hour = currentDate.getHours();
+const minute = currentDate.getMinutes();
+const second = currentDate.getSeconds();
 
-const savedHour = localStorage.getItem('currentHour');
+const currentHourV = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+localStorage.setItem('currentHour', currentHourV);
+
+const savedHour = localStorage.getItem('currentHourV');
 
 const savedHourNumber = parseInt(savedHour);
 
