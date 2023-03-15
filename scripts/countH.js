@@ -1,3 +1,4 @@
+
 const currentDate = new Date();
 
 const year = currentDate.getFullYear();
@@ -7,16 +8,16 @@ const hour = currentDate.getHours();
 const minute = currentDate.getMinutes();
 const second = currentDate.getSeconds();
 
+const currentDateTimeString = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
 
-if (localStorage.getItem('visitors-date')) {
-    visitors = localStorage.getItem('visitors-date');
-  } else {
-    visitors = " ";
-  }
+localStorage.setItem('currentDateTime', currentDateTimeString);
 
 
+const storedDateTimeString = localStorage.getItem('currentDateTime');
 
-localStorage.setItem('visitors-date', visitors);
+const visitorDate = document.getElementById('visitor-date');
+visitorDate.textContent = storedDateTimeString;
 
-const visitorCount = document.getElementById('visitor-date');
-visitorCount.textContent = visitors;
+const storedDateTime = new Date(storedDateTimeString);
+console.log(storedDateTime);
+console.log(storedDateTimeString);
