@@ -1,5 +1,5 @@
 let visitors = 0;
-const currentHour = new Date().getHours();
+const currentHour = new Date()
 
 localStorage.setItem('currentHour', currentHour);
 
